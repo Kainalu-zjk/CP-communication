@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>双人聊天</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 初始页面 -->
+    <div id="initial-page" class="page active">
+        <div class="welcome-container">
+            <h1>双人聊天室</h1>
+            <p class="welcome-text">欢迎来到双人聊天室！在这里，您可以与另一位用户进行有趣的对话。</p>
+            <button id="start-btn" class="primary-btn">开始</button>
+            <p id="online-count">当前在线人数：0 人（包括您自己）</p>
+        </div>
+    </div>
+
+    <!-- 备忘录页面 -->
+    <div id="memo-page" class="page">
+        <h2>请在备忘录输入五句话，每输入一句话点击确定按钮</h2>
+        <div class="input-container">
+            <input type="text" id="memo-input" placeholder="在此输入备忘录内容">
+            <button id="confirm-btn" class="primary-btn">确认</button>
+        </div>
+        <div id="memo-list" class="memo-list"></div>
+    </div>
+
+    <!-- 聊天页面 -->
+    <div id="chat-page" class="page">
+        <div id="timer" class="timer">05:00</div>
+        <div id="chat-container" class="chat-container"></div>
+        <div id="saved-memos" class="saved-memos"></div>
+        <div class="input-container">
+            <input type="text" id="chat-input" placeholder="请拖动或选择备忘录中的句子发送" readonly>
+            <button id="send-btn" class="primary-btn">发送</button>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html> 
